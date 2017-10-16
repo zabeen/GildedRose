@@ -30,8 +30,8 @@ namespace csharp
             Assert.AreEqual(80, items[3].Quality);
             Assert.AreEqual(80, items[4].Quality);
             Assert.AreEqual(21, items[5].Quality);
-            Assert.AreEqual(50, items[6].Quality);
-            Assert.AreEqual(50, items[7].Quality);
+            Assert.AreEqual(51, items[6].Quality);
+            Assert.AreEqual(52, items[7].Quality);
         }
 
         [Test]
