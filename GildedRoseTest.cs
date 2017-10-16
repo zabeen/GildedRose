@@ -9,7 +9,8 @@ namespace csharp
         [Test]
         public void CheckQuality()
         {
-            IList<Item> items = new List<Item>{
+            IList<Item> items = new List<Item>
+            {
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
@@ -36,7 +37,8 @@ namespace csharp
         [Test]
         public void CheckSellIn()
         {
-            IList<Item> items = new List<Item>{
+            IList<Item> items = new List<Item>
+            {
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
@@ -58,6 +60,23 @@ namespace csharp
             Assert.AreEqual(14, items[5].SellIn);
             Assert.AreEqual(9, items[6].SellIn);
             Assert.AreEqual(4, items[7].SellIn);
+        }
+
+        [Test]
+        public void QualityNeverNegative()
+        {
+            IList<Item> items = new List<Item>
+            {
+                new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 0},
+                new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 0}
+            };
+            GildedRose app = new GildedRose(items);
+            app.UpdateQuality();
+
+            Assert.AreNotEqual(-1, items[0].Quality);
+            Assert.AreNotEqual(-1, items[1].Quality);
+
+
         }
     }
 }
