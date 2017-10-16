@@ -62,6 +62,19 @@ namespace csharp
                         }
                     }
                     break;
+                case "Conjured Mana Cake":
+                    if (item.Quality > 0)
+                    {
+                        if (item.SellIn <= 0)
+                        {
+                            quality = item.Quality - 4;
+                        }
+                        else
+                        {
+                            quality-=2;
+                        }
+                    }
+                    break;
                 default:
                     if (item.Quality > 0)
                     {
