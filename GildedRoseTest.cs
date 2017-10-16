@@ -78,5 +78,20 @@ namespace csharp
 
 
         }
+
+        [Test]
+        public void QualityNeverGreaterThan50()
+        {
+            IList<Item> items = new List<Item>
+            {
+                new Item {Name = "Aged Brie", SellIn = 2, Quality = 50},
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 50}
+            };
+            GildedRose app = new GildedRose(items);
+            app.UpdateQuality();
+
+            Assert.AreNotEqual(51, items[0].Quality);
+            Assert.AreNotEqual(51, items[1].Quality);
+        }
     }
 }
