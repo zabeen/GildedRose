@@ -93,6 +93,7 @@ namespace csharp
             Assert.AreNotEqual(51, items[0].Quality);
             Assert.AreNotEqual(51, items[1].Quality);
         }
+
         [Test]
         public void QualityDecreasesTwiceAsFast ()
         {
@@ -106,8 +107,6 @@ namespace csharp
 
             Assert.AreEqual(8, items[0].Quality);
             Assert.AreEqual(10, items[1].Quality);
-
-
         }
 
         [Test]
@@ -126,6 +125,8 @@ namespace csharp
             Assert.AreEqual(23, items[1].Quality);
             Assert.AreEqual(24, items[2].Quality);
         }
+
+        [Test]
         public void Quality_IncreasesByThree_WhenSellin5OrLess()
         {
             IList<Item> items = new List<Item>
@@ -140,6 +141,23 @@ namespace csharp
             Assert.AreEqual(23, items[0].Quality);
             Assert.AreEqual(24, items[1].Quality);
             Assert.AreEqual(25, items[2].Quality);
+        }
+
+        [Test]
+        public void Quality_DropsToZero_WhenSellIn0()
+        {
+            IList<Item> items = new List<Item>
+            {
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 20},
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -1, Quality = 21},
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -2, Quality = 22}
+            };
+            GildedRose app = new GildedRose(items);
+            app.UpdateQuality();
+
+            Assert.AreEqual(0, items[0].Quality);
+            Assert.AreEqual(0, items[1].Quality);
+            Assert.AreEqual(0, items[2].Quality);
         }
     }
 }
