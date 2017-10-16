@@ -63,7 +63,7 @@ namespace csharp
         }
 
         [Test]
-        public void QualityNeverNegative()
+        public void QualityRemainsAt0()
         {
             IList<Item> items = new List<Item>
             {
@@ -73,14 +73,14 @@ namespace csharp
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
 
-            Assert.AreNotEqual(-1, items[0].Quality);
-            Assert.AreNotEqual(-1, items[1].Quality);
+            Assert.AreEqual(0, items[0].Quality);
+            Assert.AreEqual(0, items[1].Quality);
 
 
         }
 
         [Test]
-        public void QualityNeverGreaterThan50()
+        public void QualityRemainedAt50()
         {
             IList<Item> items = new List<Item>
             {
@@ -90,8 +90,8 @@ namespace csharp
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
 
-            Assert.AreNotEqual(51, items[0].Quality);
-            Assert.AreNotEqual(51, items[1].Quality);
+            Assert.AreEqual(50, items[0].Quality);
+            Assert.AreEqual(50, items[1].Quality);
         }
 
         [Test]
