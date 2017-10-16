@@ -93,5 +93,21 @@ namespace csharp
             Assert.AreNotEqual(51, items[0].Quality);
             Assert.AreNotEqual(51, items[1].Quality);
         }
+        [Test]
+        public void QualityDecreasesTwiceAsFast ()
+        {
+            IList<Item> items = new List<Item>
+            {
+                new Item {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 10},
+                new Item {Name = "Elixir of the Mongoose", SellIn = 0, Quality = 12}
+            };
+            GildedRose app = new GildedRose(items);
+            app.UpdateQuality();
+
+            Assert.AreEqual(8, items[0].Quality);
+            Assert.AreEqual(10, items[1].Quality);
+
+
+        }
     }
 }
