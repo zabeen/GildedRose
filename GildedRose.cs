@@ -39,7 +39,6 @@ namespace csharp
                         quality++;
                     break;
                 case "Sulfuras, Hand of Ragnaros":
-
                     break;
                 case "Backstage passes to a TAFKAL80ETC concert":
                     if (item.Quality < 50)
@@ -67,11 +66,11 @@ namespace csharp
                     {
                         if (item.SellIn <= 0)
                         {
-                            quality = item.Quality - 4;
+                            quality -= 4;
                         }
                         else
                         {
-                            quality-=2;
+                            quality -= 2;
                         }
                     }
                     break;
@@ -80,7 +79,7 @@ namespace csharp
                     {
                         if (item.SellIn <= 0)
                         {
-                            quality = item.Quality - 2;
+                            quality -= 2;
                         }
                         else
                         {
