@@ -126,5 +126,20 @@ namespace csharp
             Assert.AreEqual(23, items[1].Quality);
             Assert.AreEqual(24, items[2].Quality);
         }
+        public void Quality_IncreasesByThree_WhenSellin5OrLess()
+        {
+            IList<Item> items = new List<Item>
+            {
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 20},
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 21},
+                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 3, Quality = 22}
+            };
+            GildedRose app = new GildedRose(items);
+            app.UpdateQuality();
+
+            Assert.AreEqual(23, items[0].Quality);
+            Assert.AreEqual(24, items[1].Quality);
+            Assert.AreEqual(25, items[2].Quality);
+        }
     }
 }
