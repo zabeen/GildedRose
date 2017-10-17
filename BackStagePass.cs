@@ -6,16 +6,38 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    class BackStagePass : Item
+    class BackStagePass : Bridge
     {
-        public BackStagePass()
-        {
-                
-        }
-
         private void UpdateSellin()
         {
-            
+            this.SellIn--;
+        }
+        private void UpdateQuality()
+        {
+            if (this.Quality < 50)
+            {
+                if (this.SellIn <= 0)
+                {
+                    this.Quality = 0;
+                }
+                else if (this.SellIn <= 5)
+                {
+                    this.Quality += 3;
+                }
+                else if (this.SellIn <= 10)
+                {
+                    this.Quality += 2;
+                }
+                else
+                {
+                    this.Quality++;
+                }
+            }
+        }
+        public override void UpdateValue()
+        {
+            UpdateSellin();
+            UpdateQuality();
         }
     }
 }

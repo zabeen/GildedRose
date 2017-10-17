@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="ApprovalTest.cs" />
     <Compile Include="BackStagePass.cs" />
+    <Compile Include="Bridge.cs" />
     <Compile Include="Cheese.cs" />
     <Compile Include="Conjure.cs" />
     <Compile Include="Default.cs" />

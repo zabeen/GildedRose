@@ -6,38 +6,21 @@ using System.Threading.Tasks;
 
 namespace csharp
 {
-    class Sulfuras : Item
+    class Sulfuras : Bridge
     {
-        readonly IList<Sulfuras> _sulfurasLst;
-
-        private Sulfuras(IList<Sulfuras> sulfurasLst)
+        private void UpdateSellin()
         {
-            _sulfurasLst = sulfurasLst;
+            // nothing to do
         }
-
-        public Sulfuras()
+        private void UpdateQuality()
         {
-                
+            // nothing to do
         }
-
-        private int UpdateSellin(int sellin)
+        public override void UpdateValue()
         {
-            return sellin;
+            UpdateSellin();
+            UpdateQuality();
         }
-        private int UpdateQuality(int quality)
-        {
-            return quality;
-        }
-        public void UpdateValue()
-        {
-            foreach (var sulfuras in _sulfurasLst)
-            {
-                sulfuras.SellIn = sulfuras.UpdateSellin(sulfuras.SellIn);
-                sulfuras.Quality = sulfuras.UpdateQuality(sulfuras.Quality);
-            }
-        }
-
-
     }
 
 }
