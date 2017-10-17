@@ -11,9 +11,9 @@ namespace csharp
         {
             IList<ItemType> items = new List<ItemType>
             {
-                new ItemType {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
+                new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 0},
-                new ItemType {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
+                new Generic {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
                 new Legendary {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
                 new Legendary {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 20},
@@ -39,9 +39,9 @@ namespace csharp
         {
             IList<ItemType> items = new List<ItemType>
             {
-                new ItemType {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
+                new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 0},
-                new ItemType {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
+                new Generic {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
                 new Legendary {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
                 new Legendary {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 20},
@@ -67,8 +67,8 @@ namespace csharp
         {
             IList<ItemType> items = new List<ItemType>
             {
-                new ItemType {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 0},
-                new ItemType {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 0}
+                new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 0},
+                new Generic {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 0}
             };
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
@@ -99,8 +99,8 @@ namespace csharp
         {
             IList<ItemType> items = new List<ItemType>
             {
-                new ItemType {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 10},
-                new ItemType {Name = "Elixir of the Mongoose", SellIn = 0, Quality = 12}
+                new Generic {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 10},
+                new Generic {Name = "Elixir of the Mongoose", SellIn = 0, Quality = 12}
             };
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();

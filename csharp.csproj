@@ -72,6 +72,7 @@
     <Compile Include="ItemTypes\AgedCheese.cs" />
     <Compile Include="ItemTypes\BackstagePass.cs" />
     <Compile Include="ItemTypes\Conjured.cs" />
+    <Compile Include="ItemTypes\Generic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
