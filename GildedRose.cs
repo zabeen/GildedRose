@@ -1,34 +1,43 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace csharp
 {
     public class GildedRose
     {
         IList<Item> Items;
-        public GildedRose(IList<Item> Items)
+        
+        public GildedRose(IList<Item> items)
         {
-            this.Items = Items;
+            this.Items = items;
         }
 
         public void UpdateQuality()
         {
             foreach (var item in Items)
             {
-                item.SellIn = UpdateSellin(item.SellIn, item.Name);
+                item.SellIn = UpdateSellin(item.SellIn);
                 item.Quality = UpdateQualityOfItem(item);
             }
         }
 
-        private int UpdateSellin(int sellin, string name)
+        private int UpdateSellin(int sellin)
         {
-            if (name != "Sulfuras, Hand of Ragnaros")
-            {
-                sellin--;
-            }
+            sellin--;
             return sellin;
         }
 
-        private int UpdateQualityOfItem (Item item)
+        //private int UpdateSellin(int sellin, string name)
+        //{
+        //    if (name != "Sulfuras, Hand of Ragnaros")
+        //    {
+
+        //        sellin--;
+        //    }
+        //    return sellin;
+        //}
+
+        private int UpdateQualityOfItem(Item item)
         {
             int quality = item.Quality;
 
