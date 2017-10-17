@@ -8,6 +8,18 @@ namespace csharp
 {
     public abstract class Bridge : Item
     {
-        public abstract void UpdateValue();
+        public virtual void UpdateSellin()
+        {
+            this.SellIn--;
+        }
+
+        public abstract void UpdateQuality();
+        public virtual void UpdateValue()
+        {
+            UpdateSellin();
+            UpdateQuality();
+
+        }
+       
     }
 }

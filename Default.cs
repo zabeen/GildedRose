@@ -8,22 +8,13 @@ namespace csharp
 {
     class Default : Bridge
     {
-        private void UpdateSellin()
-        {
-            this.SellIn--;
-        }
-        private void UpdateQuality()
+        public override void UpdateQuality()
         {
             if (this.Quality > 0)
             {
                 this.Quality -= (this.SellIn <= 0) ? 2 : 1;
             }
         }
-        public override void UpdateValue()
-        {
-            UpdateSellin();
-            UpdateQuality();
 
-        }
     }
 }

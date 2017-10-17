@@ -8,11 +8,7 @@ namespace csharp
 {
     class Conjure : Bridge
     {
-        private void UpdateSellin()
-        {
-            this.SellIn--;
-        }
-        private void UpdateQuality()
+        public override void UpdateQuality()
         {
             if (this.Quality > 0)
             {
@@ -25,11 +21,6 @@ namespace csharp
                     this.Quality -= 2;
                 }
             }
-        }
-        public override void UpdateValue()
-        {
-            UpdateSellin();
-            UpdateQuality();
         }
     }
 }

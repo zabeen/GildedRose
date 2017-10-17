@@ -8,19 +8,10 @@ namespace csharp
 {
     class Cheese : Bridge
     {
-        private void UpdateSellin()
-        {
-            this.SellIn--;
-        }
-        private void UpdateQuality()
+        public override void UpdateQuality()
         {
             if (this.Quality < 50)
                 this.Quality++;
-        }
-        public override void UpdateValue()
-        {
-            UpdateSellin();
-            UpdateQuality();
         }
     }
 }

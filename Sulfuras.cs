@@ -8,19 +8,13 @@ namespace csharp
 {
     class Sulfuras : Bridge
     {
-        private void UpdateSellin()
+        public override void UpdateSellin()
         {
             // nothing to do
         }
-        private void UpdateQuality()
+        public override void UpdateQuality()
         {
             // nothing to do
-        }
-        public override void UpdateValue()
-        {
-            UpdateSellin();
-            UpdateQuality();
         }
     }
-
 }

@@ -8,11 +8,7 @@ namespace csharp
 {
     class BackStagePass : Bridge
     {
-        private void UpdateSellin()
-        {
-            this.SellIn--;
-        }
-        private void UpdateQuality()
+        public override void UpdateQuality()
         {
             if (this.Quality < 50)
             {
@@ -34,10 +30,6 @@ namespace csharp
                 }
             }
         }
-        public override void UpdateValue()
-        {
-            UpdateSellin();
-            UpdateQuality();
-        }
+
     }
 }
