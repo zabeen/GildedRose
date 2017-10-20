@@ -7,11 +7,10 @@ namespace csharp
         {
             // Override behaviour
             // As long as quality > 0
-            // if sellin > 0, decrease quality by 2
-            // else decrease quality by 4
+            // decrease quality twice as much as Generic Item
             if (this.Quality > 0)
             {
-                this.Quality -= (this.SellIn > 0) ? 2 : 4;
+                this.Quality -= (this.SellIn > 0) ? Generic.INDATE_INCREASE*2 : Generic.EXPIRY_INCREASE*2;
             }
         }
     }
