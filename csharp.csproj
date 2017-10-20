@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="ApprovalTest.cs" />
     <Compile Include="GildedRose.cs" />
-    <Compile Include="GildedRoseTest.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +72,14 @@
     <Compile Include="Items\BackstagePass.cs" />
     <Compile Include="Items\Conjured.cs" />
     <Compile Include="Items\Generic.cs" />
+    <Compile Include="Tests\ItemSellinTest.cs" />
+    <Compile Include="Tests\ItemQualityTest.cs" />
+    <Compile Include="Tests\GenericQualityTest.cs" />
+    <Compile Include="Tests\AgedCheeseQualityTest.cs" />
+    <Compile Include="Tests\LegendaryQualityTest.cs" />
+    <Compile Include="Tests\BackstagePassQualityTest.cs" />
+    <Compile Include="Tests\ConjuredQualityTest.cs" />
+    <Compile Include="Tests\LegendarySellinTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Items\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

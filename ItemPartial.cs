@@ -3,6 +3,8 @@ namespace csharp
 {
     public partial class Item
     {
+        public const int MAX_QUALITY = 50;
+
         public void UpdateValues()
         {
             UpdateSellin();
