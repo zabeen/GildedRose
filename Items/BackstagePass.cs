@@ -1,9 +1,9 @@
 ﻿using System;
 namespace csharp
 {
-    public class BackstagePass : ItemType
+    public class BackstagePass : Item
     {
-        public override void UpdateQuality()
+        protected override void UpdateQuality()
         {
             // Override behaviour
             // As long as quality < 50

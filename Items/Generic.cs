@@ -1,9 +1,9 @@
 ﻿using System;
 namespace csharp
 {
-    public class Generic : ItemType
+    public class Generic : Item
     {
-        public override void UpdateQuality()
+        protected override void UpdateQuality()
         {
             // override behaviour of Generic is
             // as long as Quality > 0,

@@ -9,7 +9,7 @@ namespace csharp
         [Test]
         public void CheckQuality()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 0},
@@ -37,7 +37,7 @@ namespace csharp
         [Test]
         public void CheckSellIn()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 0},
@@ -65,7 +65,7 @@ namespace csharp
         [Test]
         public void QualityRemainsAt0()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 0},
                 new Generic {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 0}
@@ -82,7 +82,7 @@ namespace csharp
         [Test]
         public void QualityRemainedAt50()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 50},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 50}
@@ -97,7 +97,7 @@ namespace csharp
         [Test]
         public void QualityDecreasesTwiceAsFast ()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 10},
                 new Generic {Name = "Elixir of the Mongoose", SellIn = 0, Quality = 12}
@@ -112,7 +112,7 @@ namespace csharp
         [Test]
         public void Quality_IncreasesByTwo_WhenSellin10OrLess()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 20},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 9, Quality = 21},
@@ -129,7 +129,7 @@ namespace csharp
         [Test]
         public void Quality_IncreasesByThree_WhenSellin5OrLess()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 5, Quality = 20},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 21},
@@ -146,7 +146,7 @@ namespace csharp
         [Test]
         public void Quality_DropsToZero_WhenSellIn0()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 20},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -1, Quality = 21},
@@ -162,7 +162,7 @@ namespace csharp
         [Test]
         public void ConjureItemDecreasesBy2()
         {
-            IList<ItemType> items = new List<ItemType>
+            IList<Item> items = new List<Item>
             {
                 new Conjured {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6},
                 new Conjured {Name = "Conjured Mana Cake", SellIn = 0, Quality = 8}

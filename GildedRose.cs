@@ -4,8 +4,8 @@ namespace csharp
 {
     public class GildedRose
     {
-        IList<ItemType> Items;
-        public GildedRose(IList<ItemType> Items)
+        IList<Item> Items;
+        public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
         }
@@ -14,8 +14,7 @@ namespace csharp
         {
             foreach (var item in Items)
             {
-                item.UpdateSellin();
-                item.UpdateQuality();
+                item.UpdateValues();
             }
         }
     }

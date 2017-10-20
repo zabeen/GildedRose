@@ -1,9 +1,9 @@
 ﻿using System;
 namespace csharp
 {
-    public class Conjured : ItemType
+    public class Conjured : Item
     {
-        public override void UpdateQuality()
+        protected override void UpdateQuality()
         {
             // Override behaviour
             // As long as quality > 0

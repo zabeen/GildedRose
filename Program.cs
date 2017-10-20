@@ -9,7 +9,7 @@ namespace csharp
         {
             Console.WriteLine("OMGHAI!");
 
-            IList<ItemType> Items = new List<ItemType>{
+            IList<Item> Items = new List<Item>{
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedCheese {Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new Generic {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},

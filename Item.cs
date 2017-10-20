@@ -1,6 +1,6 @@
 ﻿namespace csharp
 {
-    public class Item
+    public partial class Item
     {
         public string Name { get; set; }
         public int SellIn { get; set; }
