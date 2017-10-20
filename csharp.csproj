@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApprovalTest.cs" />
     <Compile Include="GildedRose.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="Tests\BackstagePassQualityTest.cs" />
     <Compile Include="Tests\ConjuredQualityTest.cs" />
     <Compile Include="Tests\LegendarySellinTest.cs" />
+    <Compile Include="Tests\ApprovalTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
