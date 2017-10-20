@@ -9,6 +9,9 @@ namespace csharp
             // Increase quality by 1, as long as quality is < MAX_QUALITY
             if (this.Quality < MAX_QUALITY)
                 this.Quality++;
+
+            // in case value increases past max quality
+            AdjustQualityToMaxValue();
         }
     }
 }

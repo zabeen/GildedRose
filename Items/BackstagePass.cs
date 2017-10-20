@@ -29,6 +29,9 @@ namespace csharp
                 {
                     this.Quality++;
                 }
+
+                // in case value increases past max quality
+                AdjustQualityToMaxValue();
             }
         }
     }

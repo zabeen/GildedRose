@@ -9,10 +9,6 @@ namespace csharp
         {
             UpdateSellin();
             UpdateQuality();
-
-            // enforce cap on Quality value
-            if (this.Quality > MAX_QUALITY)
-                this.Quality = MAX_QUALITY;
         }
 
         protected virtual void UpdateSellin()
@@ -26,6 +22,12 @@ namespace csharp
         {
             // keep empty as Update Quality logic varies
             return;
+        }
+
+        protected void AdjustQualityToMaxValue()
+        {
+            if (this.Quality > MAX_QUALITY)
+                this.Quality = MAX_QUALITY;
         }
     }
 }
