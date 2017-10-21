@@ -47,7 +47,6 @@ namespace csharp
         {
             IList<Item> items = new List<Item>
             {
-                new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 1, Quality = 20},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 30},
                 new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = -1, Quality = 40}
             };
@@ -57,7 +56,6 @@ namespace csharp
 
             Assert.AreEqual(0, items[0].Quality);
             Assert.AreEqual(0, items[1].Quality);
-            Assert.AreEqual(0, items[2].Quality);
         }
     }
 }

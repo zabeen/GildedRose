@@ -8,7 +8,7 @@ namespace csharp
             // Override behaviour for Aged Cheese
             // Increase quality by 1, as long as quality is < MAX_QUALITY
             if (this.Quality < MAX_QUALITY)
-                this.Quality++;
+                this.Quality += (this.SellIn >= 0) ? INDATE_QUALITY_CHANGE : EXPIRY_QUALITY_CHANGE;
 
             // in case value increases past max quality
             AdjustQualityToMaxValue();

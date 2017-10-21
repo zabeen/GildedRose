@@ -15,8 +15,8 @@ namespace csharp
             {
                 // all these items decrease in value - initialise Quality at 0
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 0},
-                new Generic {Name = "Elixir of the Mongoose", SellIn = 0, Quality = 0},
-                new Conjured {Name = "Conjured Mana Cake", SellIn = 0, Quality = 0}
+                new Generic {Name = "Elixir of the Mongoose", SellIn = -1, Quality = 0},
+                new Conjured {Name = "Conjured Mana Cake", SellIn = -2, Quality = 0}
             };
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
@@ -27,13 +27,13 @@ namespace csharp
         }
 
         [Test]
-        public void Item_Quality_RemainsAtMaxQuality()
+        public void Item_Quality_DoesNotGoOverMaxQuality()
         {
             IList<Item> items = new List<Item>
             {
                 // these items increase in Quality
                 new AgedCheese {Name = "Aged Brie", SellIn = 15, Quality = Item.MAX_QUALITY},
-                new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = Item.MAX_QUALITY}
+                new BackstagePass {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 1, Quality = Item.MAX_QUALITY}
             };
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();

@@ -27,7 +27,6 @@ namespace csharp
         {
             IList<Item> items = new List<Item>
             {
-                new Conjured {Name = "Conjured Mana Cake", SellIn = 1, Quality = 10},
                 new Conjured {Name = "Conjured Mana Cake", SellIn = 0, Quality = 10},
                 new Conjured {Name = "Conjured Mana Cake", SellIn = -1, Quality = 10}
             };
@@ -37,7 +36,6 @@ namespace csharp
 
             Assert.AreEqual(6, items[0].Quality);
             Assert.AreEqual(6, items[1].Quality);
-            Assert.AreEqual(6, items[2].Quality);
         }
     }
 }

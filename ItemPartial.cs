@@ -4,6 +4,8 @@ namespace csharp
     public partial class Item
     {
         public const int MAX_QUALITY = 50;
+        public const int INDATE_QUALITY_CHANGE = 1;
+        public const int EXPIRY_QUALITY_CHANGE = 2;
 
         public void UpdateValues()
         {

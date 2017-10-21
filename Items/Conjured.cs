@@ -10,7 +10,7 @@ namespace csharp
             // decrease quality twice as much as Generic Item
             if (this.Quality > 0)
             {
-                this.Quality -= (this.SellIn > 0) ? Generic.INDATE_INCREASE*2 : Generic.EXPIRY_INCREASE*2;
+                this.Quality -= (this.SellIn >= 0) ? INDATE_QUALITY_CHANGE*2 : EXPIRY_QUALITY_CHANGE*2;
             }
         }
     }

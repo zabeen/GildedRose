@@ -27,7 +27,6 @@ namespace csharp
         {
             IList<Item> items = new List<Item>
             {
-                new Generic {Name = "+5 Dexterity Vest", SellIn = 1, Quality = 10},
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 10},
                 new Generic {Name = "Elixir of the Mongoose", SellIn = -1, Quality = 10}
             };
@@ -37,7 +36,6 @@ namespace csharp
 
             Assert.AreEqual(8, items[0].Quality);
             Assert.AreEqual(8, items[1].Quality);
-            Assert.AreEqual(8, items[2].Quality);
         }
     }
 }
