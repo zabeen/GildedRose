@@ -13,6 +13,9 @@ namespace csharp
             {
                 this.Quality -= (this.SellIn >= 0) ? INDATE_QUALITY_CHANGE : EXPIRY_QUALITY_CHANGE;
             }
+
+            // In case value falls below Minimum after change
+            AdjustQualityToMinValue();
         }
     }
 }

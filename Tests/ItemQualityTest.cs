@@ -16,7 +16,7 @@ namespace csharp
                 // all these items decrease in value - initialise Quality at 0
                 new Generic {Name = "+5 Dexterity Vest", SellIn = 0, Quality = 0},
                 new Generic {Name = "Elixir of the Mongoose", SellIn = -1, Quality = 0},
-                new Conjured {Name = "Conjured Mana Cake", SellIn = -2, Quality = 0}
+                new Conjured {Name = "Conjured Mana Cake", SellIn = -2, Quality = 1}
             };
             GildedRose app = new GildedRose(items);
             app.UpdateQuality();
