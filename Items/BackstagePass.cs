@@ -6,10 +6,10 @@ namespace csharp
         protected override void UpdateQuality()
         {
             // Override behaviour
-            // if sellin <= 0, set quality to 0 - return
-            // Else, As long as quality < MAX_QUALITY
-            // else if sellin <= 5, increase quality by 3
-            // else if sellin <= 10, increase quality by 2
+            // if sellin < 0, set quality to 0 - return
+            // Else, As long as quality < MAX_QUALITY:
+            // if sellin < 5, increase quality by 3
+            // else if sellin < 10, increase quality by 2
             // else increase quality by 1
 
             if (this.SellIn < 0)

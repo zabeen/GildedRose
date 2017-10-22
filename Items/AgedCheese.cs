@@ -5,8 +5,8 @@ namespace csharp
     {
         protected override void UpdateQuality()
         {
-            // Override behaviour for Aged Cheese
-            // Increase quality by 1, as long as quality is < MAX_QUALITY
+            // Override behaviour
+            // Increase quality, as long as quality is < MAX_QUALITY
             if (this.Quality < MAX_QUALITY)
                 this.Quality += (this.SellIn >= 0) ? INDATE_QUALITY_CHANGE : EXPIRY_QUALITY_CHANGE;
 

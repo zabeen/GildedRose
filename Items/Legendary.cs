@@ -5,7 +5,7 @@ namespace csharp
     {
         protected override void UpdateSellin()
         {
-            // do not change this property
+            // Sellin value does not change
             return;
         }
     }
