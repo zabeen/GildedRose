@@ -7,7 +7,7 @@ namespace csharp
     public class LegendaryQualityTest
     {
         [Test]
-        public void LegendaryQualityDoesNotChange()
+        public void Legendary_Quality_DoesNotChange()
         {
             IList<Item> items = new List<Item>
             {
